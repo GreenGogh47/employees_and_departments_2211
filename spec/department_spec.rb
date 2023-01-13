@@ -19,7 +19,7 @@ RSpec.describe Department do
     end
   end
   
-  describe '#employees' do
+  describe '#hire' do
     it 'gives a list of all employees in the department' do
       customer_service.hire(@bobbi)
       customer_service.hire(@aaron)
