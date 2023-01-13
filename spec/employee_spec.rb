@@ -17,9 +17,9 @@ RSpec.describe Employee do
     end
   end
   
-  xdescribe '#give_raise' do
+  describe '#give_raise' do
     it 'increases employee salary by argument amount' do
-      bobbi.give_raise(5000)
+      @bobbi.give_raise(5000)
       expect(@bobbi.salary).to eq(105000)
     end
   end
