@@ -21,8 +21,8 @@ RSpec.describe Department do
   
   describe '#hire' do
     it 'gives a list of all employees in the department' do
-      customer_service.hire(@bobbi)
-      customer_service.hire(@aaron)
+      @customer_service.hire(@bobbi)
+      @customer_service.hire(@aaron)
       expect(@customer_service.employees).to eq([@bobbi, @aaron])
     end
   end
