@@ -56,8 +56,11 @@ RSpec.describe Budget do
     end
   end
 
-  xdescribe '#all_employee_salaries' do
-    it 'lists all employees with their salaries as a hash'
+  describe '#all_employee_salaries' do
+    it 'lists all employees with their salaries as a hash' do
+      @budget.add_department(@customer_service)
+      @budget.add_department(@sales)
+      
       expect(@budget.all_employee_salaries).to eq({
         @bobbi.name => 100000,
         @aaron.name => 90000,
