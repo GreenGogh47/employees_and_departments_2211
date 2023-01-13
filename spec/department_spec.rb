@@ -18,4 +18,26 @@ RSpec.describe Department do
       expect(@customer_service.employees).to eq([])
     end
   end
+  
+  describe '#employees' do
+    it 'gives a list of all employees in the department' do
+      customer_service.hire(@bobbi)
+      customer_service.hire(@aaron)
+      expect(@customer_service.employees).to eq([@bobbi, @aaron])
+    end
+  end
+
+  xdescribe '#expense' do
+    it 'is the total of all department expenses' do
+      expect(@customer_service.expenses).to eq(0)
+    end
+  end
+
+  xdescribe '#expenses' do
+    it 'adds department expenses to #expenses' do
+      @customer_service.expense(100)
+      @customer_service.expense(25)
+      expect(@customer_service.expenses).to eq(125)
+    end
+  end
 end
