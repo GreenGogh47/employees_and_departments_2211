@@ -2,9 +2,9 @@ require './lib/department'
 require './lib/employee'
 require './lib/budget'
 
-RSpec.describe Department do
+RSpec.describe Budget do
   before do
-    @budget = Budget.new
+    @budget = Budget.new(2022)
 
     @customer_service = Department.new("Customer Service") 
     @sales = Department.new("Sales") 
@@ -21,7 +21,7 @@ RSpec.describe Department do
     end
     
     it 'has attributes' do
-      expect(@budget.year).to eq(2010)
+      expect(@budget.year).to eq(2022)
       expect(@budget.departments).to eq([])
     end
   end
