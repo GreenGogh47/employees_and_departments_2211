@@ -7,5 +7,7 @@ class Budget
     @year = year
   end
 
-  
+  def add_department(department)
+    @departments << department
+  end
 end
