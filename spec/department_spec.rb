@@ -27,7 +27,7 @@ RSpec.describe Department do
     end
   end
 
-  xdescribe '#expense' do
+  describe '#expense' do
     it 'is the total of all department expenses' do
       expect(@customer_service.expenses).to eq(0)
     end
