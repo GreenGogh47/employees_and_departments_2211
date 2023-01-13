@@ -13,7 +13,7 @@ class Department
     @employees << employee
   end
 
-  # def expense(cost)
-
-  # end
+  def expense(cost)
+    @expenses += cost
+  end
 end
